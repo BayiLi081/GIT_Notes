@@ -119,17 +119,62 @@ https://www.linkedin.com/learning/git-essential-training-the-basics/git-auto-com
 用正则表达式全局搜索commit log
 ```git log --grep="Init"```
 
+woaiAGI_2022
+
 Git status
 
 `git status`
 
 当你文件夹中新建了新文件时，使用git status查看untracked files或者uncommited files.
 
+### 远程仓库
 
+C:\Users\libay\.ssh目录下查看是否存在`id_rsa`和`id_rsa.pub`这两个文件，如果没有，在terminal中输入`ssh-keygen -t rsa -C "youremail@example.com"`生成
 
+你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。
 
+如果一切顺利的话，可以在用户主目录里找到`.ssh`目录，里面有`id_rsa`和`id_rsa.pub`两个文件，这两个就是SSH Key的秘钥对，`id_rsa`是私钥，不能泄露出去，`id_rsa.pub`是公钥，可以放心地告诉任何人。
 
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
 
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴`id_rsa.pub`文件的内容：
 
+#### 添加远程仓库
 
+1. 在GitHub上创建一个远程仓库GIT_Notes
+
+2. 在本地的仓库Git_Instruction下运行
+
+   `git remote add origin https://github.com/BayiLi081/GIT_Notes.git`
+
+   `git branch -M main`
+
+   `git push -u origin main`
+
+从现在起，只要本地作了提交，就可以通过命令：`git push origin master`
+
+#### 从远程仓库克隆
+
+1. 登陆GitHub，创建一个新的仓库Web_Mapping：
+
+   Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：
+   `git clone git@github.com:BayiLi081/Web_Mapping.git`
+
+## 分支管理
+
+1. 创建dev分支，然后切换到dev分支 (`git checkout`命令加上`-b`表示创建并切换)
+
+   `git checkout -b dev`
+
+2. 使用`git branch`命令查看当前分支:
+
+   当前分支前会标一个`*`
+
+3. 对当前分支修改后提交代码为（以修改文件为readme.md为例）：
+
+   `git add readme.md`
+
+   `git commit -m "branch test"`
+
+4. (可选步骤 Optional) 切换为
 
