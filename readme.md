@@ -151,9 +151,7 @@ https://www.linkedin.com/learning/git-essential-training-the-basics/git-auto-com
 ```git log --since=2019-03-01 --until=2019-03-31 --author="Karen" --grep="refactor"``` will output the log for all of Karen's commits labeled "refactor" during March 2019.
 
 用正则表达式全局搜索commit log
-```git log --grep="Init"```
-
-woaiAGI_2022
+`git log --grep="Init"`
 
 Git status
 
