@@ -14,7 +14,8 @@
 |          | 创建+切换分支                         | git checkout -b <name> 或者 git switch -c <name> |
 |          | 合并某分支到当前分支                  | git merge <name>                                 |
 |          | 删除分支                              | git branch -d <name>                             |
-|          |                                       |                                                  |
+|          | 删除本地分支                          | git branch --delete --remotes origin/branch-name |
+|          | 删除远程分支（本地和云端）            | git push origin -d <branch>                      |
 
 
 
@@ -150,6 +151,48 @@ Thumbs.db
 # Ignore desktop.ini files (Windows)
 desktop.ini
 ```
+
+## 基础步骤 Basic steps to collabrate a Git repository
+
+1. Clone the repository you want to work with
+
+   ```bash
+   git clone <url>
+   ```
+
+2. Create a new branch to start your own modification
+
+   ```bash
+   git branch <new_branch>
+   ```
+
+   If you have already created the branch or not sure if you did, check all the available branch by `git branch -a`
+
+3. Switch to the new branch
+
+   ```bash
+   git checkout <p_branch>
+   or
+   git switch <p_branch>
+   ```
+
+4. Make the modification on the files
+
+5. Merge the new branch to the "main" branch
+
+   1. Switch back the main branch again
+
+      ```
+      git switch main
+      ```
+
+   2. Merge the modified branch to the main branch
+
+      ```
+      git merge <p_branch>
+      ```
+
+6. Commit to the remote side (If there is another commit from other user, there could be divergence of branch, go to the issue 01 for solution)
 
 ## Commit Message
 
@@ -386,7 +429,22 @@ git fetch --prune origin
    git mergetool --tool=vimdiff
    ```
 
-   
+
+## GIT Aliases
+
+REF: [Git - Git Aliases (git-scm.com)](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)
+
+### composing git add -A and git commit together
+
+```
+git config --global alias.add-commit '!git add -A && git commit'
+```
+
+```
+git add-commit -m 'My commit message'
+```
+
+
 
 ## References
 
