@@ -83,11 +83,30 @@ https://www.linkedin.com/learning/git-essential-training-the-basics/git-auto-com
 定位到所在文件夹
 
 1. 将本地仓库初始化，命令：```git init``` This command will write a .git directory.
+
 2. `git status` 查看文件状态
+
+   basically this command asks Git what you are doing
+
+   Read the noted the command returns backward (from bottom to top)
+
 3. `git add `文件列表 追踪文件
+
 4. `git commit -m 提交信息` 向仓库提交代码例如`git commit -m "initial comit"`
+
 5. `git log` 查看提交记录
+
 6. 将你需要的项目从github或者服务器上克隆下来，命令：`git clone url`
+
+### Compare the difference
+
+```bash
+git diff <file>
+```
+
+After adding the file for tracking, if we have changes the file, we can use this command to see the changes modified to the file.
+
+
 
 ### 撤销 Undo
 
