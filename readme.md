@@ -10,6 +10,7 @@
 |          | See all remote branch names           | git branch -r                                    |
 |          | See all local and remote branch names | git branch -a                                    |
 |          | 创建分支                              | git branch <name>                                |
+|          | 创建新的空分支                         | git switch --orphan <new branch>                |
 |          | 切换分支                              | git checkout <name> 或者 git switch <name>       |
 |          | 创建+切换分支                         | git checkout -b <name> 或者 git switch -c <name> |
 |          | 合并某分支到当前分支                  | git merge <name>                                 |
