@@ -1,5 +1,9 @@
 # GIT 的使用
 
+| The overall workflow of Git (Source: levelupcoding.co)       |
+| ------------------------------------------------------------ |
+| ![GitWorkflow](C:\Users\LiBayi\Documents\work\GIT_Notes\imgs\GitWorkflow.jpg) |
+
 | Function | Action                                | Syntax                                           |
 | -------- | ------------------------------------- | ------------------------------------------------ |
 |          | 推送分支                              | git push origin main                             |
